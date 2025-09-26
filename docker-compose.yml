@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  max-mysql:
+    container_name: max-mysql
+    image: mysql:8
+    command: --mysql-native-password=ON --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --binlog-expire-logs-seconds=259200
+    restart: always
+    volumes:
+      - ./data/mysql/:/var/lib/mysql/
+    ports:
+      - 33366:3306
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: "max"
+      MYSQL_USER: "max"
+      MYSQL_PASSWORD: "123456"
+
+  chatgpt-share-max:
+    container_name: chatgpt-share-max
+    image: wxyin/chatgpt-share-max:latest
+    environment:
+      TZ: Asia/Shanghai # 指定时区
+      MAX_DATABASE_URL: jdbc:mysql://max-mysql:3306/max
+      MAX_DATABASE_USERNAME: root
+      MAX_DATABASE_PASSWORD: 123456
+    ports:
+      - "6777:6777"
+    volumes:
+      - ./upload:/app/upload
+    restart: always
+    
+networks:
+  default:
+    external: true
+    name: max
