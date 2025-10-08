@@ -3,6 +3,7 @@ cd ~
 git clone https://github.com/xyhelper/chatgpt-share-server-deploy.git
 git clone https://github.com/1198722360/chatgpt-share-max.git
 
+
 echo "version: '3.8'
 services:
   chatgpt-mysql:
