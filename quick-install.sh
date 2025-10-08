@@ -116,4 +116,5 @@ cd ~/chatgpt-share-server-deploy
 ./deploy.sh
 
 cd ~/chatgpt-share-max
+chmod +x ./deploy.sh
 ./deploy.sh
