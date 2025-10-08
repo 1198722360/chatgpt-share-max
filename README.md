@@ -6,9 +6,9 @@ https://demo.xxsxx.fun
 ![](https://raw.githubusercontent.com/1198722360/picture/main/20251009051536971.png)
 
 ## 功能
-- [x] ChatGPT镜像
-- [x] Claude镜像
-- [x] Grok镜像
+- [x] ChatGPT镜像 (@xyhelper)
+- [x] Claude镜像 (@lyy0709)
+- [x] Grok镜像 (@lyy0709)
 - [x] 在线支付(当面付、易支付)，各种权限任意搭配，灵活定价
 - [x] 激活码
 - [x] 优惠券
