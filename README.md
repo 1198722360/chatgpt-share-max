@@ -38,6 +38,7 @@ http://ip:6777/list
 
 ## 管理员账号
 admin
+
 123456
 
 ## 进阶
@@ -103,5 +104,7 @@ demo-grok.chatgpt-share-max.com {
 
 ## 致谢
 https://github.com/xyhelper/chatgpt-share-server-deploy
+
 https://github.com/lyy0709/ddclaude-share-server-deploy
+
 https://github.com/lyy0709/grok-share-server-deploy
