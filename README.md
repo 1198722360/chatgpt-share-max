@@ -1,5 +1,10 @@
 # ChatGPT Share Max - 优雅、多功能的AI服务聚合平台
+## 联系方式
 ![](https://raw.githubusercontent.com/1198722360/picture/main/20251009051633332.png)
+
+## 部署要求
+- 熟悉chatgpt-share-server等镜像服务的使用方法
+- 2c2g以上的服务器
 
 ## 快速预览
 https://demo.xxsxx.fun
@@ -65,3 +70,30 @@ demo.chatgpt-share-max.com {
     reverse_proxy 127.0.0.1:8300
 }
 ```
+
+## 进阶
+### Claude
+```
+cd ~
+# 拉取修改配置文件后的ddclaude
+git clone https://github.com/1198722360/ddclaude-share-server-deploy.git
+cd ddclaude-share-server-deploy
+# 部署ddclaude
+./deploy.sh
+```
+
+### Grok
+```
+cd ~
+# 拉取修改配置文件后的grok-share-server
+git clone https://github.com/1198722360/grok-share-server-deploy.git
+cd grok-share-server-deploy
+# 部署grok-share-server
+./deploy.sh
+```
+
+
+## 致谢
+https://github.com/xyhelper/chatgpt-share-server-deploy
+https://github.com/lyy0709/ddclaude-share-server-deploy
+https://github.com/lyy0709/grok-share-server-deploy
