@@ -2,5 +2,5 @@
 
 ## 新机快速部署
 ```
-wget https://github.com/1198722360/chatgpt-share-max/blob/main/quick-install.sh && bash quick-install.sh
+wget https://raw.githubusercontent.com/1198722360/chatgpt-share-max/refs/heads/main/quick-install.sh && bash quick-install.sh
 ```
