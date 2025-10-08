@@ -40,11 +40,32 @@ http://ip:6777/list
 admin
 123456
 
+## 进阶
+### Claude
+```
+cd ~
+# 拉取修改配置文件后的ddclaude
+git clone https://github.com/1198722360/ddclaude-share-server-deploy.git
+cd ddclaude-share-server-deploy
+# 部署ddclaude
+./deploy.sh
+```
+
+### Grok
+```
+cd ~
+# 拉取修改配置文件后的grok-share-server
+git clone https://github.com/1198722360/grok-share-server-deploy.git
+cd grok-share-server-deploy
+# 部署grok-share-server
+./deploy.sh
+```
+
 ## 反向代理
 ### Caddy
 ```
 # 粘贴到/etc/caddy/Caddyfile
-demo.chatgpt-share-max.com {
+demo.xxsxx.fun {
     reverse_proxy /max-login 127.0.0.1:6777
     reverse_proxy /max-register 127.0.0.1:6777
     reverse_proxy /list 127.0.0.1:6777
@@ -69,27 +90,14 @@ demo.chatgpt-share-max.com {
     # 其余转给share
     reverse_proxy 127.0.0.1:8300
 }
-```
 
-## 进阶
-### Claude
-```
-cd ~
-# 拉取修改配置文件后的ddclaude
-git clone https://github.com/1198722360/ddclaude-share-server-deploy.git
-cd ddclaude-share-server-deploy
-# 部署ddclaude
-./deploy.sh
-```
+demo-claude.chatgpt-share-max.com {
+    reverse_proxy 127.0.0.1:8400
+}
 
-### Grok
-```
-cd ~
-# 拉取修改配置文件后的grok-share-server
-git clone https://github.com/1198722360/grok-share-server-deploy.git
-cd grok-share-server-deploy
-# 部署grok-share-server
-./deploy.sh
+demo-grok.chatgpt-share-max.com {
+    reverse_proxy 127.0.0.1:8500
+}
 ```
 
 
