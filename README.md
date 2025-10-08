@@ -57,6 +57,7 @@ cd ~
 # 拉取修改配置文件后的ddclaude
 git clone https://github.com/1198722360/ddclaude-share-server-deploy.git
 cd ddclaude-share-server-deploy
+chmod +x ./deploy.sh
 # 部署ddclaude
 ./deploy.sh
 ```
@@ -67,6 +68,7 @@ cd ~
 # 拉取修改配置文件后的grok-share-server
 git clone https://github.com/1198722360/grok-share-server-deploy.git
 cd grok-share-server-deploy
+chmod +x ./deploy.sh
 # 部署grok-share-server
 ./deploy.sh
 ```
