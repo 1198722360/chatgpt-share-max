@@ -6,7 +6,7 @@ git clone https://github.com/1198722360/chatgpt-share-max.git
 
 echo "version: '3.8'
 services:
-  chatgpt-mysql:
+  mysql-chatgpt:
     image: mysql:8
     command: --mysql-native-password=ON --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     restart: always
@@ -19,7 +19,7 @@ services:
       MYSQL_DATABASE: "cool" # 业务库名
       MYSQL_USER: "cool" # 业务库用户名
       MYSQL_PASSWORD: "123123" # 业务库密码
-  chatgpt-redis:
+  redis-chatgpt:
     image: redis
     # command: --requirepass "12345678" # redis库密码,不需要密码注释本行
     restart: always
@@ -35,7 +35,7 @@ services:
     environment:
       TZ: Asia/Shanghai # 指定时区
       # 接入网关地址
-      CHATPROXY: "https://muchai.v4.xyhelper-gateway.com"
+      CHATPROXY: "https://123.xyhelper-gateway.com"
       # 接入网关的authkey
       AUTHKEY: "xyhelper"
       # 内容审核及速率限制
@@ -75,7 +75,7 @@ networks:
 echo "database:
   default: # 数据源名称,当不指定数据源时 default 为默认数据源
     type: "mysql" # 数据库类型
-    host: "chatgpt-mysql" # 数据库地址
+    host: "mysql-chatgpt" # 数据库地址
     port: "3306" # 数据库端口
     user: "root" # 数据库用户名
     pass: "123456" # 数据库密码
@@ -88,7 +88,7 @@ echo "database:
 
 redis:
   cool:
-    address: "chatgpt-redis:6379"
+    address: "redis-chatgpt:6379"
     db: 0
 
 
